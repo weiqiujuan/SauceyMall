@@ -1,0 +1,26 @@
+.header .logo{
+    position: absolute;
+    display: block;
+    font-size: 36px;
+    color: #c60023;
+    left:60px;
+    top: 34px;
+    font-weight: bold;
+}
+.header .search{
+    padding: 40px 0 30px 250px;
+}
+.header .search .search-input{
+    width:550px;
+    height:40px;
+    line-height: 40px;
+    padding-left: 10px;
+    font-size: 15px;
+    border:2px solid #c60023;
+}
+.header .search .search-input{
+   position: absolute;/*脱离文档流*/
+    height: 44px;
+    widows: 88px;
+}
+
