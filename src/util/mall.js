@@ -58,15 +58,15 @@ var _mm = {
     //字段的验证，支持非空，手机，邮箱
     validate: function (value, type) {
         var value = $.trim(value);
-       //非空验证
+        //非空验证
         if ("require" === type) {
             return !!value;
         }
         //手机号验证
-        else if("phone"===type){
+        else if ("phone" === type) {
             return /^1\d{10}$/.test(value);
         }
-        else if("email"===type){
+        else if ("email" === type) {
             return /^(\w)+(\. \w)*@(\w)+((\. \w{2,3}){1,3})$/.test(value);
         }
     },
@@ -75,8 +75,8 @@ var _mm = {
         window.location.href = "./user-login.html?redirect=" + encodeURIComponent(window.location.href);
     },
     //返回主页
-    goHome:function () {
-        window.location.href='./index.html';
+    goHome: function () {
+        window.location.href = './index.html';
     }
 
 };
