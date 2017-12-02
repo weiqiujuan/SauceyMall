@@ -1,10 +1,10 @@
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+var HtmlWebpackPlugin = require("html-webpack-plugin");
 
 //环境变量的配置.dev/online
 var WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev';
-
+console.log(WEBPACK_ENV);
 //获取html-webpack-plugin参数的方法
 var getHtmlConfig = function (name,title) {
     return {
@@ -21,7 +21,9 @@ var getHtmlConfig = function (name,title) {
 var config = {
     entry: {
         "common": ['./src/page/common/index.js'],
-        "index": ['./src/page/index/index.js']
+        "index": ['./src/page/index/index.js'],
+        "result": ['./src/page/result/index.js']
+
     },
     output: {
         path: './dist',//存放路径
@@ -29,13 +31,14 @@ var config = {
         filename: 'js/[name].js'
     },
     externals: {
-        "jquery": "Ubuntu.jquery"
+        "jquery": "window.jQuery"
     },
     module: {
         loaders: [
-            {test: /\.css$/, loader: 'style-loader!css-loader'},
+            {test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader","css-loader")},
             { test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=100&name=resource/[name].[ext]' },
             { test: /\.string$/, loader: 'string-loader'}
+
         ]
     },
     resolve: {
@@ -48,7 +51,6 @@ var config = {
         }
     },
     plugins: [
-        /*  new Vendors(),*/
         //独立通用模块
         new webpack.optimize.CommonsChunkPlugin({
             name: "common",
@@ -57,7 +59,8 @@ var config = {
         //css单独打包到文件
         new ExtractTextPlugin('css/[name].css'),
         //html模板的处理
-        new HtmlWebpackPlugin(getHtmlConfig("index",'首页'))
+        new HtmlWebpackPlugin(getHtmlConfig("index",'首页')),
+        new HtmlWebpackPlugin(getHtmlConfig("result",'结果页'))
     ]
 };
 

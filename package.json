@@ -4,11 +4,10 @@
   "description": "前端代码",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "WEBPACK_ENV=dev webpack-dev-server --inline --port 8088",
     "dev-win": "set WEBPACK_ENV=dev&&webpack-dev-server --inline --port 8088",
     "dist": "WEBPACK_ENV=online webpack -p",
-    "dist-win": "WEBPACK_ENV=online webpack -p"
+    "dist-win": "set WEBPACK_ENV=online && webpack -p"
   },
   "repository": {
     "type": "git",
