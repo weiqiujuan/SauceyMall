@@ -2,13 +2,13 @@
  * Created by weiqiujuan on 17-11-27.
  */
 'use strict';
-var Hogan = require("hogan.js");
-var conf = {
+let Hogan = require("hogan.js");
+let conf = {
     serverHost: ''
 };
-var _mm = {
+let _mm = {
     request: function (param) {
-        var _this = this;
+        let _this = this;
         $.ajax({
             type: param.method || 'get',
             url: param.url || "",
@@ -37,13 +37,13 @@ var _mm = {
     },//获取url参数
     getUrlParam: function (name) {
         //happymall.com/product/list?keyword==xxx&&page=1
-        var reg = new RegExp('(^|&)' + name + '=([^$]*)(&|$)');//获取？号开头的参数
-        var result = window.location.search.substr(1).match(reg);//去掉匹配到正则的？号
+        let reg = new RegExp('(^|&)' + name + '=([^$]*)(&|$)');//获取？号开头的参数
+        let result = window.location.search.substr(1).match(reg);//去掉匹配到正则的？号
         return result ? decodeURIComponent(result[2]) : null;//匹配到的值第二个值
     },
     //渲染html文件
     renderHtml: function (htmlTemplate, data) {
-        var template = Hogan.compile(htmlTemplate),//进行编译
+        let template = Hogan.compile(htmlTemplate),//进行编译
             result = template.render(data);
         return result;
     },
@@ -57,7 +57,7 @@ var _mm = {
     },
     //字段的验证，支持非空，手机，邮箱
     validate: function (value, type) {
-        var value = $.trim(value);
+        let value = $.trim(value);
         //非空验证
         if ("require" === type) {
             return !!value;

@@ -30,7 +30,8 @@
     "jsx-loader": "^0.13.2",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.0",
-    "url-loader": "^0.5.8",
+    "svg-url-loader": "^2.3.0",
+    "url-loader": "^0.5.9",
     "webpack": "^1.15.0",
     "webpack-dev-server": "^1.16.5"
   },

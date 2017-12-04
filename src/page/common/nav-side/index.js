@@ -1,17 +1,13 @@
 /**
  * Created by weiqiujuan on 17-12-1.
  */
-/**
- * Created by weiqiujuan on 17-12-1.
- */
 'use strict';
 require('./index.css');
-var _mm = require("util/mall.js");
-var templateIndex=require("./index.string")
-
+let _mm = require("util/mall.js");
+let templateIndex=require("./index.string");
 
 //侧边导航
-var navside = {
+let navSide = {
     option:{
         name:"",
         navList:[
@@ -29,13 +25,13 @@ var navside = {
     //渲染导航菜单
     renderNav: function () {
         //计算active数据
-        for(var i=0,iLength=this.option.navList.length;i<iLength;i++){
+        for(let i=0,iLength=this.option.navList.length;i<iLength;i++){
             if(this.option.navList[i].name===this.option.name){
                 this.option.navList[i].isActive=true;
             }
         }
         //渲染list数据
-        var navHtml=_mm.renderHtml(templateIndex,{
+        let navHtml=_mm.renderHtml(templateIndex,{
             naveList:this.option.navList
         });
         //吧html放入容器
@@ -44,4 +40,4 @@ var navside = {
     }
 
 };
-module.exports = navside.init();
+module.exports = navSide;
