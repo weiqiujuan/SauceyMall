@@ -1,9 +1,10 @@
 /*导航主体*/
 .nav-side{
     position: relative;
-    left: 80px;
+    left: 60px;
     width:100px;
     min-height: 100px;
+    float: left;
 }
 .nav-side .nav-item{
     line-height: 25px;
