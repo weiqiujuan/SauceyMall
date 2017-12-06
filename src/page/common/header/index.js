@@ -2,9 +2,9 @@
  * Created by weiqiujuan on 17-12-1.
  */
 'use strict';
-require('index.css');
+require('./index.css');
 
-let _mm = require('util/mm.js');
+let _mm = require('util/mall.js');
 //通用页面头部
 let header = {
     init: function () {

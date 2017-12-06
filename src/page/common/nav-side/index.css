@@ -1,12 +1,15 @@
 /*导航主体*/
 .nav-side{
-    float: left;
-    width:130px;
+    position: relative;
+    left: 80px;
+    width:100px;
     min-height: 100px;
 }
 .nav-side .nav-item{
     line-height: 25px;
-    font-size: 13px;
+    font-size: 15px;
+    float: left;
+    margin-bottom: 10px;
 }
 .nav-side .nav-item .link{
     color: #888;
@@ -14,6 +17,7 @@
 }
 .nav-side .nav-item.active .link{
     color: #600;
+
 
 }
 /*右侧内容区*/

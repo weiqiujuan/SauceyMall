@@ -4,9 +4,10 @@
 
 'use strict';
 require('./index.css');
-require("page/common/header/index.css");
-require("page/common/nav/index.css");
-require("page/common/nav-side/index.css");
+require('../common/nav/index.js');
+require('../common/header/index.js');
+require('../common/nav-side/index.js');
+
 let _mm=require("util/mall.js");
 let navSide=require('page/common/nav-side/index.js');
 navSide.init({

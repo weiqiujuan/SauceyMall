@@ -1,11 +1,12 @@
 .header .logo{
     position: absolute;
+    left:80px;
+    top: 60px;
     display: block;
     font-size: 36px;
     color: #c60023;
-    left:60px;
-    top: 34px;
     font-weight: bold;
+    text-decoration: none;
 }
 .header .search{
     padding: 40px 0 30px 250px;
@@ -17,10 +18,22 @@
     padding-left: 10px;
     font-size: 15px;
     border:2px solid #c60023;
+    outline: none;
 }
-.header .search .search-input{
+.header .search .search-btn{
    position: absolute;/*脱离文档流*/
+    margin:19px 0 0 0;
     height: 44px;
-    widows: 88px;
+    width:80px;
 }
 
+/*面包屑导航*/
+.crumb{
+    margin-bottom:15px;
+    height:50px;
+    line-height:50px;
+    background: #eee;
+    color: #888;
+    font-size:14px;
+    border-top:2px solid #c60023;
+}
