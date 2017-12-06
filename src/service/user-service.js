@@ -3,8 +3,8 @@
  */
 'use strict';
 
-var _mm=require('util/mall.js');
-var _user={
+let _mm=require('util/mall.js');
+let _user={
     //用户登录
     login:function (userInfo,resolve,reject) {
         _mm.request({
