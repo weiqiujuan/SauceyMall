@@ -1,7 +1,7 @@
 .header .logo{
     position: absolute;
     left:80px;
-    top: 60px;
+    top: 45px;
     display: block;
     font-size: 36px;
     color: #c60023;
@@ -22,7 +22,7 @@
 }
 .header .search .search-btn{
    position: absolute;/*脱离文档流*/
-    margin:19px 0 0 0;
+/*    margin:19px 0 0 0;*/
     height: 44px;
     width:80px;
 }
