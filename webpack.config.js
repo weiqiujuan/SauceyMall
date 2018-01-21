@@ -79,8 +79,6 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig("list", '商品清单页')),
         new HtmlWebpackPlugin(getHtmlConfig("cart", '购物车')),
         new HtmlWebpackPlugin(getHtmlConfig("user-pass-update", '修改密码')),
-
-
     ]
 };
 
