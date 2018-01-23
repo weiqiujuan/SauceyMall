@@ -4,8 +4,7 @@
 require('./index.css');
 
 let _mm = require('util/mall.js');
-/*
- let templatePagination=require('./index.string');*/
+let templatePagination=require('./index.string');
 
 let Pagination = function () {
     let _this = this;
@@ -29,7 +28,7 @@ let Pagination = function () {
 Pagination.prototype.render = function (userOption) {
     //合并选项
     this.option = $.extend({}, this.defaultOption, userOption);
-    //判断容器是否为合法的jquery对象
+    //判断容器是否为合法的jquery对象,instanceof是jquery中的一个对象
     if (!(this.option.container instanceof jQuery)) {
         return;
     }
@@ -39,7 +38,7 @@ Pagination.prototype.render = function (userOption) {
     }
     this.option.container.html(this.getPaginationHtml());
 };
-//获取分页的html
+//获取分页的html　　｜上一页｜　1　2　3　4　5　6　｜下一页｜
 Pagination.prototype.getPaginationHtml = function () {
     let html = '',
         option = this.option,
