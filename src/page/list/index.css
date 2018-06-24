@@ -1,79 +1,91 @@
-.sort-con{
+.sort-con {
     overflow: auto;
 }
-.sort-con .sort-item{
+
+.sort-con .sort-item {
     float: left;
     display: inline-block;
     position: relative;
-    padding:0 8px;
-    height:24px;
-    line-height:24px;
-    border:1px solid #cccccc;
-    margin-right:-1px;
+    padding: 0 8px;
+    height: 24px;
+    line-height: 24px;
+    border: 1px solid #cccccc;
+    margin-right: -1px;
     background: #ffffff;
     color: #333333;
     cursor: pointer;
 }
-.sort-con .sort-item.active{
+
+.sort-con .sort-item.active {
     background: #c60023;
-    border:1px solid #c60023;
+    border: 1px solid #c60023;
     color: #ffffff;
 }
-.sort-con .sort-item .fa-sort-desc{
+
+.sort-con .sort-item .fa-sort-desc {
     position: absolute;
-    top:8px;
+    top: 8px;
     right: 8px;
 }
-.sort-con .sort-item.asc .fa-sort-desc{
-    opacity: 0.6;
-}
+
 .sort-con .sort-item.asc .fa-sort-desc {
     opacity: 0.6;
 }
+
+.sort-con .sort-item.desc .fa-sort-asc {
+    opacity: 0.6;
+}
+
 /*列表*/
-.p-list-con{
+.p-list-con {
     margin-top: 15px;
-    margin-right:-20px;
+    margin-right: -20px;
     overflow: hidden;
 }
-.p-list-con .p-item{
+
+.p-list-con .p-item {
     position: relative;
-    width:180px;
+    width: 180px;
     float: left;
     padding: 10px;
-    margin:0 20px 20px 0;
+    margin: 0 20px 20px 0;
     background: #fff;
 }
-.p-list-con .p-item .p-img-con{
-    width:180px;
-    height:200px;
+
+.p-list-con .p-item .p-img-con {
+    width: 180px;
+    height: 200px;
 }
-.p-list-con .p-item .p-img-con .p-img{
-    width:100%;
+
+.p-list-con .p-item .p-img-con .p-img {
+    width: 100%;
     height: 100%;
 }
-.p-list-con .p-item  .p-price-con{
-    height:30px;
-    line-height:30px;
+
+.p-list-con .p-item .p-price-con {
+    height: 30px;
+    line-height: 30px;
 }
-.p-list-con .p-item .p-price-con .p-price{
-    font-size:16px;
+
+.p-list-con .p-item .p-price-con .p-price {
+    font-size: 16px;
     color: #e7380d;
 }
 
-.p-list-con .p-item .p-name-con{
-    height:40px;
+.p-list-con .p-item .p-name-con {
+    height: 40px;
     overflow: hidden;
 }
 
-.p-list-con .p-item .p-name-con .p-name{
-    line-height:20px;
-    margin-bottom:10px;
+.p-list-con .p-item .p-name-con .p-name {
+    line-height: 20px;
+    margin-bottom: 10px;
     color: #666;
     text-decoration: none;
 }
+
 /* 错误信息 */
-.err-tip{
+.err-tip {
     height: 60px;
     line-height: 60px;
     color: #f60;

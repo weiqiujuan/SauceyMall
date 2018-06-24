@@ -29,7 +29,7 @@ let page = {
             _this.submit();
         });
         // 如果按下回车，也进行提交
-        $(".user-content").keyup(function () {
+        $(".user-content").keyup(function (e) {
             //13表示回车键
             if (e.keyCode === 13) {
                 _this.submit();

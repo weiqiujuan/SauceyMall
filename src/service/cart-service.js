@@ -1,7 +1,6 @@
 /**
  * Created by weiqiujuan on 17-12-8.
  */
-<<<<<<< HEAD
 let _mm = require('util/mall.js');
 let _cart = {
     getCartCount: function (resolve, reject) {
@@ -85,7 +84,7 @@ let _cart = {
             success: resolve,
             error: reject
         });
-    },
-}
+    }
+};
 module.exports = _cart;
 

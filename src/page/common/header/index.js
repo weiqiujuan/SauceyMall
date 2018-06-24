@@ -27,7 +27,7 @@ let header = {
         $("#search-input").keyup(function (e) {
             //13回车键
             if(e.keyCode===13){
-                _this.serchSubmit();
+                _this.searchSubmit();
             }
         })
     },

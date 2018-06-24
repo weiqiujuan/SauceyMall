@@ -33,7 +33,6 @@ var config = {
         'user-center-update': ['./src/page/user-center-update/index.js'],
         'user-pass-update': ['./src/page/user-pass-update/index.js'],
         'result': ['./src/page/result/index.js']
-
     },
     output: {
         path: './dist',//存放路径

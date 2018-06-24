@@ -57,17 +57,17 @@ let _mm = {
     },
     //字段的验证，支持非空，手机，邮箱
     validate: function (value, type) {
-        let value = $.trim(value);
+        let val = $.trim(value);
         //非空验证
         if ("require" === type) {
-            return !!value;
+            return !!val;
         }
         //手机号验证
         else if ("phone" === type) {
-            return /^1\d{10}$/.test(value);
+            return /^1\d{10}$/.test(val);
         }
         else if ("email" === type) {
-            return /^(\w)+(\. \w)*@(\w)+((\. \w{2,3}){1,3})$/.test(value);
+            return /^(\w)+(\. \w)*@(\w)+((\. \w{2,3}){1,3})$/.test(val);
         }
     },
     //统一登录处理
@@ -78,6 +78,5 @@ let _mm = {
     goHome: function () {
         window.location.href = './index.html';
     }
-
 };
 module.exports = _mm;

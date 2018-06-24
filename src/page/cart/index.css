@@ -25,36 +25,42 @@
     width: 10%;
     text-align: left;
 }
-.cart-table .cell-img .p-img{
-    margin:10px 0;
-    width:80px;
+
+.cart-table .cell-img .p-img {
+    margin: 10px 0;
+    width: 80px;
     height: 80px;
-    border:1px solid #dddddd;
+    border: 1px solid #dddddd;
 }
-.cart-table .cell-info{
-    width:35%;
+
+.cart-table .cell-info {
+    width: 35%;
     text-align: left;
 }
-.cart-header .cell-info{
-    width:45%;
+
+.cart-header .cell-info {
+    width: 45%;
     text-align: center;
 }
-.cart-table .cell-price{
-    width:10%;
-    text-align:center;
+
+.cart-table .cell-price {
+    width: 10%;
+    text-align: center;
 }
-.cart-table .cell-count{
-    width:15%;
-    text-align:center;
+
+.cart-table .cell-count {
+    width: 15%;
+    text-align: center;
 }
-.cart-table .cell-count .count-input{
-    width:60px;
-    height:28px;
-    line-height:28px;
-    border:1px solid #dddddd;
+
+.cart-table .cell-count .count-input {
+    width: 60px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #dddddd;
     text-align: center;
     vertical-align: middle;
-    outline:none;
+    outline: none;
     color: #333;
 }
 
@@ -83,37 +89,44 @@
     width: 10%;
     text-align: center;
 }
+
 /*footer*/
-.cart-footer{
+.cart-footer {
     position: relative;
-    line-height:50px;
+    line-height: 50px;
     background: #eeeeee;
     /*overflow: hidden;*/
 }
-.cart-footer .select-con{
+
+.cart-footer .select-con {
     float: left;
     padding-left: 20px;
 }
-.cart-footer .delete-con{
+
+.cart-footer .delete-con {
     float: left;
     margin-left: 20px;
 }
-.cart-footer .submit-con{
+
+.cart-footer .submit-con {
     float: right;
 }
-.cart-footer .submit-con .submit-total{
+
+.cart-footer .submit-con .submit-total {
     font-size: 18px;
     color: #c60023;
     font-weight: bold;
-    margin-right:30px;
+    margin-right: 30px;
     vertical-align: middle;
 }
-.cart-footer .submit-con .btn-submit{
-    width:80px;
+
+.cart-footer .submit-con .btn-submit {
+    width: 80px;
     text-align: center;
-    height:50px;
-    line-height:50px;
+    height: 50px;
+    line-height: 50px;
 }
+
 /*错误信息*/
 .err-tip {
     height: 60px;

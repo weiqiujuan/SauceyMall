@@ -1,6 +1,5 @@
-<<<<<<< HEAD
+
 # Happymall-fe
-happymall
 
 --registry=https://registry.npm.taobao.org<p>
 

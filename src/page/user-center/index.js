@@ -33,8 +33,6 @@ let page = {
         })
     }
 };
-
-
 $(function () {
     page.init();
 });
