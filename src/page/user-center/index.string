@@ -14,20 +14,11 @@
                     <div class="form-line">
                         <span class="label">问 题：</span>
                         <span class="text">{{question}}</span>
-<<<<<<< HEAD
                     </div>
-=======
-                    </div>　
->>>>>>> d2985c0ed6496cccd3c45466821fec630be22c30
+
                     <div class="form-line">
                         <span class="label">答 案：</span>
                         <span class="text">{{answer}}</span>
                     </div>
-<<<<<<< HEAD
-=======
-                    <div class="form-line">
-                        <a href="" class="btn">编辑</a>
-                    </div>
->>>>>>> d2985c0ed6496cccd3c45466821fec630be22c30
                     <a class="btn btn-submit" href="./user-center-update.html">编辑</a>
           </div>

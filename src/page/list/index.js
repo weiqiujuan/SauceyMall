@@ -13,19 +13,11 @@ let templateIndex = require('./index.string');
 let page = {
     data: {
         listParam: {
-<<<<<<< HEAD
             keyword: _mm.getUrlParam('keyword') || '',
             categoryId: _mm.getUrlParam('categoryId') || '',
             orderBy: _mm.getUrlParam('orderBy') || 'default',
             pageNum: _mm.getUrlParam('pageNum') || 1,
             pageSize: _mm.getUrlParam('pageSize') || 20
-=======
-            keyword: _mm.getUrlParam('keyword')||'',
-            categoryId: _mm.getUrlParam('categoryId')||'',
-            orderBy: _mm.getUrlParam('orderBy')||'default',
-            pageNum: _mm.getUrlParam('pageNum')||1,
-            pageSize: _mm.getUrlParam('pageSize')||20
->>>>>>> d2985c0ed6496cccd3c45466821fec630be22c30
         }
     },
     init: function () {
@@ -39,15 +31,8 @@ let page = {
         let _this = this;
         //排序的点击事件
         $('.sort-item').click(function () {
-<<<<<<< HEAD
             let $this = $(this);
             _this.data.listParam.pageNum = 1;
-=======
-
-            let $this = $(this);
-            _this.data.listParam.pageNum = 1;
-
->>>>>>> d2985c0ed6496cccd3c45466821fec630be22c30
             //点击默认排序
             if ($this.data('type') === 'default') {
                 //已经是active样式
@@ -69,11 +54,8 @@ let page = {
                 //升序，降序的处理
                 if (!$this.hasClass('asc')) {
                     $this.addClass('asc').removeClass('desc');
-<<<<<<< HEAD
                     _this.data.listParam.orderBy = 'price_asc';
-=======
-                    _this.data.listParam.orederBy = 'price_asc';
->>>>>>> d2985c0ed6496cccd3c45466821fec630be22c30
+
                 } else {
                     $this.addClass('desc').removeClass('asc');
                     _this.data.listParam.orderBy = 'price_desc';
@@ -106,11 +88,8 @@ let page = {
                 pages: res.pages
             })
         }, function (errMsg) {
-<<<<<<< HEAD
             _mm.errorTips(errMsg);
-=======
-            _mm.errotTips(errMsg);
->>>>>>> d2985c0ed6496cccd3c45466821fec630be22c30
+
         });
     },
     loadPagination: function (pageInfo) {

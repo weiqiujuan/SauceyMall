@@ -12,23 +12,13 @@ let templateIndex = require('./index.string');
 
 let page = {
     data: {
-<<<<<<< HEAD
         productId: _mm.getUrlParam('productId') || ''
-=======
-        data: {
-            productId: _mm.getUrlParam('produceId') || ''
-        }
->>>>>>> d2985c0ed6496cccd3c45466821fec630be22c30
     },
     init: function () {
         this.onLoad();
         this.bindEvent();
-<<<<<<< HEAD
     },
-=======
-    }
-    ,
->>>>>>> d2985c0ed6496cccd3c45466821fec630be22c30
+
     onLoad: function () {
         //   如果没有传productId，自动跳回首页
         if (!this.data.productId) {
@@ -46,11 +36,7 @@ let page = {
         });
         //    count的操作
         $(document).on('click', '.p-count-btn', function () {
-<<<<<<< HEAD
             let type = $(this).hasClass('plus') ? 'plus' : 'minus',
-=======
-            let type = $(type).hasClass('plus') ? 'plus' : 'minus',
->>>>>>> d2985c0ed6496cccd3c45466821fec630be22c30
                 $pCount = $('.p-count'),
                 currCount = parseInt($pCount.val()),
                 minCount = 1,
@@ -67,15 +53,9 @@ let page = {
                 productId: _this.data.productId,
                 count: $('.p-count').val()
             }, function (res) {
-<<<<<<< HEAD
                 window.location.href = './result.html?type=cart-add';
             }, function (errMsg) {
                 _mm.errorTips(errMsg);
-=======
-                window.location, hres = './result.html?type=cart-add';
-            }, function (errMag) {
-                _mm.errotTips(errMag);
->>>>>>> d2985c0ed6496cccd3c45466821fec630be22c30
             })
         })
     },
@@ -86,11 +66,7 @@ let page = {
             $pageWrap = $('.page-wrap');
         //loading
         $pageWrap.html('<div class="loading"></div>');
-<<<<<<< HEAD
         // 请求detail信息
-=======
-        //    请求detail信息
->>>>>>> d2985c0ed6496cccd3c45466821fec630be22c30
         _product.getProductDetail(this.data.productId, function (res) {
             _this.filter(res);
             //    缓存detail的数据

@@ -4,10 +4,7 @@
 require('./index.css');
 require('page/common/nav/index.js');
 require('page/common/header/index.js');
-<<<<<<< HEAD
-=======
-require('page/common/nav-side/index.js');
->>>>>>> d2985c0ed6496cccd3c45466821fec630be22c30
+
 let navSide = require('page/common/nav-side/index.js');
 let _mm = require("util/mall.js");
 let _user = require("service/user-service.js");
@@ -32,11 +29,7 @@ let page = {
             userHtml = _mm.renderHtml(templateIndex, res);
             $(".panel-body").html(userHtml)
         }, function (errMsg) {
-<<<<<<< HEAD
             _mm.errorTips(errMsg);
-=======
-            _mm.errotTips(errMsg);
->>>>>>> d2985c0ed6496cccd3c45466821fec630be22c30
         })
     }
 };

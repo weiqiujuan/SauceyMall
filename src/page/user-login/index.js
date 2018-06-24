@@ -10,17 +10,10 @@ let _mm = require("util/mall.js");
 //表单里的错误提示
 let formError = {
     show: function (errMsg) {
-<<<<<<< HEAD
         $(".error-item").show().find('.err-msg').text(errMsg);
     },
     hide: function () {
         $(".error-item").hide().find('.err-msg').text('');
-=======
-        $(".err-item").show().find('.err-msg').text(errMsg);
-    },
-    hide: function () {
-        $(".err-item").hide().find('.err-msg').text('');
->>>>>>> d2985c0ed6496cccd3c45466821fec630be22c30
     }
 
 };
@@ -50,15 +43,9 @@ let page = {
                 password: $.trim($("#password").val())
             },
             //表单提交结果
-<<<<<<< HEAD
             validateResult = this.formValidate(formData);
         //success
         if (validateResult.status) {
-=======
-            validateReault = this.formValidate(formData);
-        //success
-        if (validateReault.status) {
->>>>>>> d2985c0ed6496cccd3c45466821fec630be22c30
             _user.login(formData, function (res) {
                 window.location.href = _mm.getUrlParam('redirect') || './index.html';
             }, function (errMsg) {
@@ -67,11 +54,7 @@ let page = {
         }
         //验证失败
         else {
-<<<<<<< HEAD
             formError.show(validateResult.msg);
-=======
-            formError.show(validateReault.msg);
->>>>>>> d2985c0ed6496cccd3c45466821fec630be22c30
         }
     },
     //表单字段验证

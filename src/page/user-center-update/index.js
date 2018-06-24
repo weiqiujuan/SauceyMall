@@ -38,19 +38,12 @@ let page = {
                     _mm.successTips(msg);
                     window.location.href = './user-center.html'
                 }, function (errMsg) {
-<<<<<<< HEAD
                     _mm.errorTips(errMsg);
                 });
             }
             else {
                 _mm.errorTips(validateResult.msg);
-=======
-                    _mm.errotTips(errMsg);
-                });
-            }
-            else {
-                _mm.errotTips(validateResult.msg);
->>>>>>> d2985c0ed6496cccd3c45466821fec630be22c30
+
             }
         });
     },
@@ -60,11 +53,7 @@ let page = {
             userHtml = _mm.renderHtml(templateIndex, res);
             $('.panel-body').html(userHtml);
         }, function (errMsg) {
-<<<<<<< HEAD
             _mm.errorTips(errMsg);
-=======
-            _mm.errotTips(errMsg);
->>>>>>> d2985c0ed6496cccd3c45466821fec630be22c30
         })
     },
     validateForm: function (formData) {

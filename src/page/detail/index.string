@@ -48,10 +48,6 @@
         </ul>
     </div>
     <div class="detail-con">
-<<<<<<< HEAD
         {{{detail}}}
-=======
-        {{detail}}
->>>>>>> d2985c0ed6496cccd3c45466821fec630be22c30
     </div>
 </div>
