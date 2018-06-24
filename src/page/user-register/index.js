@@ -4,6 +4,7 @@
 require('./index.css');
 require('page/common/nav-simple/index.js');
 let _mm = require("util/mall.js");
+<<<<<<< HEAD
 var _user = require('service/user-service.js');
 
 
@@ -14,6 +15,16 @@ let formError = {
     },
     hide: function () {
         $(".error-item").hide().find('.err-msg').text("")
+=======
+
+//表单错误提示
+let formError = {
+    show: function (errMag) {
+        $(".err-item").show().find('.err-msg').text(errMag);
+    },
+    hide: function () {
+        $(".err-item").hide().find('.err-msg').text("")
+>>>>>>> d2985c0ed6496cccd3c45466821fec630be22c30
     }
 };
 
@@ -59,8 +70,13 @@ let page = {
                 passwordConfirm: $.trim($('#password-confirm').val()),
                 phone: $.trim($('#phone').val()),
                 email: $.trim($('#email').val()),
+<<<<<<< HEAD
                 question: $.trim($('#question').val()),
                 answer: $.trim($('#answer').val())
+=======
+                Question: $.trim($('#question').val()),
+                answer: $.trim($('#answer').val()),
+>>>>>>> d2985c0ed6496cccd3c45466821fec630be22c30
             },
             //表单验证接结果
             validateResult = this.formValidate(formData);
@@ -69,7 +85,11 @@ let page = {
             _user.register(formData, function (res) {
                 window.location.href = './result.html?type=register';
             }, function (errMsg) {
+<<<<<<< HEAD
                 formError.show(errMsg);
+=======
+                formError.show(errMsg)
+>>>>>>> d2985c0ed6496cccd3c45466821fec630be22c30
             });
         } else {
             //错误提示

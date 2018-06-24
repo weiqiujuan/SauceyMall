@@ -5,7 +5,11 @@
 require('./index.css');
 let _mm = require('util/mall.js');
 let _user = require("service/user-service.js");
+<<<<<<< HEAD
 let _cart = require("service/cart-service.js");
+=======
+/*let _cart = require("service/cart-service.js");*/
+>>>>>>> d2985c0ed6496cccd3c45466821fec630be22c30
 
 //导航
 let nav = {
@@ -29,14 +33,22 @@ let nav = {
             _user.logout(function (res) {
                 window.location.reload();
             }, function (errMsg) {
+<<<<<<< HEAD
                 _mm.errorTips(errMsg);
+=======
+                _mm.errotTips(errMsg);
+>>>>>>> d2985c0ed6496cccd3c45466821fec630be22c30
             });
         });
     },
     //加载用户信息
     loadUserInfo: function () {
         _user.checkLogin(function (res) {
+<<<<<<< HEAD
             $(".user.not-login").hide().siblings('.user.login').show()
+=======
+            $(".user.not-login").hide().slibling('.user.login').show()
+>>>>>>> d2985c0ed6496cccd3c45466821fec630be22c30
                 .find('.username').text(res.username);
         }, function (errMsg) {
             //do nothing

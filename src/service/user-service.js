@@ -2,7 +2,6 @@
  * Created by weiqiujuan on 17-12-2.
  */
 'use strict';
-
 let _mm = require('util/mall.js');
 let _user = {
     //用户登录
@@ -119,3 +118,4 @@ let _user = {
     }
 };
 module.exports = _user;
+

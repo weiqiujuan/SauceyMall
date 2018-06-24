@@ -25,14 +25,22 @@ let header = {
         });
         //点击回车后，提交
         $("#search-input").keyup(function (e) {
+<<<<<<< HEAD
             //13回车键
+=======
+            //１３是回车code
+>>>>>>> d2985c0ed6496cccd3c45466821fec630be22c30
             if(e.keyCode===13){
                 _this.serchSubmit();
             }
         })
     },
     //搜索的提交
+<<<<<<< HEAD
     searchSubmit: function () {
+=======
+    serchSubmit: function () {
+>>>>>>> d2985c0ed6496cccd3c45466821fec630be22c30
         let keyword = $.trim($('#search-input').val());
         //如果提交的时候有keyword正常跳转到list页面
         if (keyword) {

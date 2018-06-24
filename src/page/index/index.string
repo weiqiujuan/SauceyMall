@@ -29,7 +29,11 @@
     <div class="banner-arrow prev">
         <i class="fa fa-angle-left"></i>
     </div>
+<<<<<<< HEAD
     <div class="banner-arrow next">
+=======
+    <div class="banner-arrow nex">
+>>>>>>> d2985c0ed6496cccd3c45466821fec630be22c30
         <i class="fa fa-angle-right"></i>
     </div>
 </div>

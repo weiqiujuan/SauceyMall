@@ -9,10 +9,17 @@ let _mm = require("util/mall.js");
 //表单里的错误提示
 let formError = {
     show: function (errMsg) {
+<<<<<<< HEAD
         $(".error-item").show().find('.err-msg').text(errMsg);
     },
     hide: function () {
         $(".error-item").hide().find('.err-msg').text('');
+=======
+        $(".err-item").show().find('.err-msg').text(errMsg);
+    },
+    hide: function () {
+        $(".err-item").hide().find('.err-msg').text('');
+>>>>>>> d2985c0ed6496cccd3c45466821fec630be22c30
     }
 };
 
@@ -44,8 +51,13 @@ let page = {
                     _this.data.username = username;
                     _this.data.question = res;
                     _this.loadStepQuestion();
+<<<<<<< HEAD
                 }, function (errMsg) {
                     formError.show(errMsg);
+=======
+                }, function (errMag) {
+                    formError.show(errMag);
+>>>>>>> d2985c0ed6496cccd3c45466821fec630be22c30
                 });
             }
             //用户名不存在
@@ -102,6 +114,7 @@ let page = {
     },
     loadStepQuestion: function () {
         formError.hide();
+<<<<<<< HEAD
         // 做容器的切换
         $(".hide-username").hide()
             .siblings('.step-question').show()
@@ -111,6 +124,13 @@ let page = {
     loadStepPassword: function () {
         formError.hide();
         //容器的切换
+=======
+        $(".hide-username").hide().siblings('.step-question').show()
+            .find('.question').text(this.data.question);
+    },
+    loadStepPassword: function () {
+        formError.hide();
+>>>>>>> d2985c0ed6496cccd3c45466821fec630be22c30
         $(".step-question").hide()
             .siblings('.step-password').show();
     }

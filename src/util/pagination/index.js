@@ -6,6 +6,7 @@ require('./index.css');
 let _mm = require('util/mall.js');
 let templatePagination = require('./index.string');
 
+
 let Pagination = function () {
     let _this = this;
     this.defaultOption = {
@@ -75,3 +76,4 @@ Pagination.prototype.getPaginationHtml = function () {
     return html;
 };
 module.exports = Pagination;
+

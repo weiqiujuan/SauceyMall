@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Happymall-fe
 happymall
 
@@ -5,4 +6,4 @@ happymall
 
 npm install --安装依赖<p>
 webpack 打包<p>
-npm run dev --运行
+

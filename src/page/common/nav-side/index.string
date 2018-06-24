@@ -3,8 +3,14 @@
 <li class="nav-item active">
 {{/isActive}}
 {{^isActive}}
+<<<<<<< HEAD
 <li class="nav-item">
 {{/isActive}}
     <a class="link" href="{{href}}">{{desc}}</a>
+=======
+<li class='nav-item>
+{{/isActive}}
+    <a href="{{href}}" class="link">{{desc}}</a>
+>>>>>>> d2985c0ed6496cccd3c45466821fec630be22c30
 </li>
 {{/navList}}
