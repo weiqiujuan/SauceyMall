@@ -1,18 +1,18 @@
 {{#list}}
-<li class="p-item">
-            <div class="p-img-con">
-                <a href="./detail.html?productId={{id}}" class="link" target="_blank">
-                    <img src="{{imageHost}}{{mainImage}}" alt="{{name}}" class="p-img"/>
-                </a>
-            </div>
-            <div class="p-price-con">
-                <span class="p-price">￥{{price}}</span>
-            </div>
-            <div class="p-name-con">
-                <a href="./detail.html?productId={{id}}" class="p-name" target="_blank">{{name}}</a>
-            </div>
-</li>
+    <li class="p-item">
+                <div class="p-img-con">
+                    <a href="./detail.html?productId={{id}}" class="link" target="_blank">
+                        <img src="{{imageHost}}{{mainImage}}" alt="{{name}}" class="p-img"/>
+                    </a>
+                </div>
+                <div class="p-price-con">
+                    <span class="p-price">￥{{price}}</span>
+                </div>
+                <div class="p-name-con">
+                    <a href="./detail.html?productId={{id}}" class="p-name" target="_blank">{{name}}</a>
+                </div>
+    </li>
 {{/list}}
-{{^list}}
-<p class="err-tip>很抱歉，你要找的商品找不带到</p>
+{{^list}
+    <p class="err-tip>很抱歉，你要找的商品找不带到</p>
 {{/list}}

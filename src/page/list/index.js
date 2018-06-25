@@ -70,7 +70,7 @@ let page = {
             listHtml = '',
             listParam = this.data.listParam,
             $pListCon = $('.p-list-con');
-        $pListCon.html('<div class="loading"></div>>');
+        $pListCon.html('<div class="loading"></div>');
         //删除参数中不必要的字段
         listParam.categoryId ? (delete listParam.keyword) : (delete listParam.categoryId);
         //请求接口

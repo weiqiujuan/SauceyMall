@@ -21,12 +21,16 @@ let header = {
         let _this = this;
         //点击搜索按钮以后，搜索提交
         $("#search-btn").click(function () {
-            this.searchSubmit();
+            _this.searchSubmit();
         });
         //点击回车后，提交
         $("#search-input").keyup(function (e) {
             //13回车键
+<<<<<<< HEAD:mall/src/page/common/header/index.js
+            if (e.keyCode === 13) {
+=======
             if(e.keyCode===13){
+>>>>>>> 8fd85e2562e938e88f90a162a45442a8272e41f3:src/page/common/header/index.js
                 _this.searchSubmit();
             }
         })
