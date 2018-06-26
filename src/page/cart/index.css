@@ -40,7 +40,7 @@
 
 .cart-header .cell-info {
     width: 45%;
-    text-align: center;
+    padding-left: 106px;
 }
 
 .cart-table .cell-price {

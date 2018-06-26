@@ -3,7 +3,7 @@
         <table class="cart-table">
             <tr>
                 <th class="cart-cell cell-check">
-                    <label for="" class="cart-label">
+                    <label  class="cart-label">
                         {{#allChecked}}
                         <input type="checkbox" class="cart-select-all" checked/>
                         {{/allChecked}}
@@ -41,7 +41,7 @@
                     </a>
                 </td>
                 <td class="cart-cell cell-info">
-                    <a href="./detail.html?productId={{productId}}" class="link"></a>
+                    <a href="./detail.html?productId={{productId}}" class="link">{{productName}}</a>
                 </td>
                 <td class="cart-cell cell-price">￥{{productPrice}}</td>
                 <td class="cart-cell cell-count">
@@ -59,7 +59,7 @@
     </div>
     <div class="cart-footer">
         <div class="select-con">
-            <label for="">
+            <label >
                 {{#allChecked}}
                 <input type="checkbox" class="cart-select-all" checked/>
                 {{/allChecked}}

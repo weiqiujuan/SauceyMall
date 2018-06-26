@@ -30,7 +30,7 @@ let page = {
             }
             //取消选中
             else {
-                _cart.unselectAllProduct(productId, function (res) {
+                _cart.unselectProduct(productId, function (res) {
                     _this.renderCart(res);
                 }, function (errMsg) {
                     _this.showCartError();
@@ -147,7 +147,7 @@ let page = {
     //删除指定商品，支持批量，productId用逗号分割
     deleteCartProduct: function (productIds) {
         let _this = this;
-        _this.deleteCartProduct(productIds, function (res) {
+        _cart.deleteProduct(productIds, function (res) {
             _this.renderCart(res);
         }, function (errMsg) {
             _this.showCartError();
