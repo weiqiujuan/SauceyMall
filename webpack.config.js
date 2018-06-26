@@ -1,7 +1,7 @@
+var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var path=require('path');
 
 // 环境变量配置，dev / online
 var WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev';
@@ -21,10 +21,11 @@ var getHtmlConfig = function (name, title) {
 
 //webpack config
 var config = {
-
     //【新增】新增mode参数，webpack4中要指定模式，可以放在配置文件这里，
     // 也可以放在启动命令里，如--mode production
-    mode: 'dev' === WEBPACK_ENV ? 'development' : 'production',
+    /*
+        mode: 'dev' === WEBPACK_ENV ? 'development' : 'production',
+    */
 
     //【改动】：删除了入口文件的中括号，可选的改动，没什么影响
     entry: {
@@ -34,9 +35,9 @@ var config = {
         'detail': './src/page/detail/index.js',
         'cart': './src/page/cart/index.js',
         'order-confirm': './src/page/order-confirm/index.js',
-        'order-list': './src/page/order-list/index.js',
+        /*'order-list': './src/page/order-list/index.js',
         'order-detail': './src/page/order-detail/index.js',
-        'payment': './src/page/payment/index.js',
+        'payment': './src/page/payment/index.js',*/
         'user-login': './src/page/user-login/index.js',
         'user-register': './src/page/user-register/index.js',
         'user-pass-reset': './src/page/user-pass-reset/index.js',
@@ -49,9 +50,8 @@ var config = {
     output: {
         //  【改动】：删除path的配置，在webpack4中文件默认生成的位置就是/dist,
         // 而publicPath和filename特性的设置要保留
-        //path:__dirname+'/dist/'
-
-        publicPath: 'dev' === WEBPACK_ENV ? '/dist/' : '//s.happymmall.com/mmall-fe/dist/',
+        //path:__dirname+'/dist/',
+        publicPath: '/dist',
         filename: 'js/[name].js'
     },
     externals: {
@@ -66,7 +66,8 @@ var config = {
             {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
-                    fallback: "style-loader", use: "css-loader"
+                    fallback: "style-loader",
+                    use: "css-loader"
                 })
             },
 
@@ -77,11 +78,11 @@ var config = {
                 use: {
                     loader: 'html-loader',
                     options: {
-                        minimize: true, removeAttributeQuotes: false
+                        minimize: true,
+                        removeAttributeQuotes: false
                     }
                 }
             },
-
             // 【改动】：图片文件的加载方式变化，并和字体文件分开处理
             // 图片的配置
             {
@@ -153,9 +154,9 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('detail', '商品详情')),
         new HtmlWebpackPlugin(getHtmlConfig('cart', '购物车')),
         new HtmlWebpackPlugin(getHtmlConfig('order-confirm', '订单确认')),
-        new HtmlWebpackPlugin(getHtmlConfig('order-list', '订单列表')),
+        /*new HtmlWebpackPlugin(getHtmlConfig('order-list', '订单列表')),
         new HtmlWebpackPlugin(getHtmlConfig('order-detail', '订单详情')),
-        new HtmlWebpackPlugin(getHtmlConfig('payment', '订单支付')),
+        new HtmlWebpackPlugin(getHtmlConfig('payment', '订单支付')),*/
         new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
         new HtmlWebpackPlugin(getHtmlConfig('user-register', '用户注册')),
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset', '找回密码')),
@@ -166,8 +167,6 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('about', '关于MMall'))
     ],
     devServer: {
-        contentBase: path.join(__dirname, "dist"),
-        compress: true,
         port: 8088,
         inline: true,
         proxy: {
@@ -179,4 +178,4 @@ var config = {
     }
 };
 
-module.export = config;
+module.exports = config;
