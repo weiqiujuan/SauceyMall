@@ -53,6 +53,7 @@ let page = {
                 productId: _this.data.productId,
                 count: $('.p-count').val()
             }, function (res) {
+                console.log('即将加入购物车');
                 window.location.href = './result.html?type=cart-add';
             }, function (errMsg) {
                 _mm.errorTips(errMsg);
@@ -69,7 +70,7 @@ let page = {
         // 请求detail信息
         _product.getProductDetail(this.data.productId, function (res) {
             _this.filter(res);
-            //    缓存detail的数据
+            //缓存detail的数据
             _this.data.detailInfo = res;
             //render
             html = _mm.renderHtml(templateIndex, res);
