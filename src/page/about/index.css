@@ -1,0 +1,18 @@
+.panel-body .about-line {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.panel-body .about-line .about-text {
+    font-size: 14px;
+    color: #666;
+}
+
+.panel-body .about-line .about-text.enhance{
+    color: #e7380d;
+    font-weight: bold;
+}
+.panel-body .about-line .link{
+    font-size: 14px;
+}
