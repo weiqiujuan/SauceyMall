@@ -53,12 +53,11 @@ let page = {
                 productId: _this.data.productId,
                 count: $('.p-count').val()
             }, function (res) {
-                console.log('即将加入购物车');
                 window.location.href = './result.html?type=cart-add';
             }, function (errMsg) {
                 _mm.errorTips(errMsg);
-            })
-        })
+            });
+        });
     },
     //加载商品详情的数据
     loadDetail: function () {

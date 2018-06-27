@@ -77,6 +77,7 @@ let page = {
         return result;
     }
 };
+//jquery加载完成时会触发
 $(function () {
     page.init();
 });

@@ -31,10 +31,12 @@ let _mm = {
                 typeof param.error === 'function' && param.error(err.statusText)
             }
         });
-    },//获取服务器地址
+    },
+    //获取服务器地址
     getServerUrl: function (path) {
         return conf.serverHost + path;
-    },//获取url参数
+    },
+    //获取url参数
     getUrlParam: function (name) {
         //happymall.com/product/list?keyword==xxx&&page=1
         let reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)');//获取？号开头的参数

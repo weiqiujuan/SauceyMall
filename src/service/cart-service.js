@@ -19,13 +19,13 @@ let _cart = {
             error: reject
         });
     },
-    //获取购物车列表
+    //获取购物车列
     getCartList: function (resolve, reject) {
         _mm.request({
             url: _mm.getServerUrl('/cart/list.do'),
             success: resolve,
             error: reject
-        })
+        });
     },
     //选择购物车商品
     selectProduct: function (productId, resolve, reject) {
@@ -58,11 +58,11 @@ let _cart = {
         });
     },
     //取消选中全部商品
-    unselectAllProduct : function(resolve, reject){
+    unselectAllProduct: function (resolve, reject) {
         _mm.request({
-            url     : _mm.getServerUrl('/cart/un_select_all.do'),
-            success : resolve,
-            error   : reject
+            url: _mm.getServerUrl('/cart/un_select_all.do'),
+            success: resolve,
+            error: reject
         });
     },
     // 更新购物车商品数量
@@ -85,6 +85,6 @@ let _cart = {
             error: reject
         });
     }
-};
+}
 module.exports = _cart;
 

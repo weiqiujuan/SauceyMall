@@ -36,7 +36,7 @@ let page = {
                     _this.showCartError();
                 })
             }
-        })
+        });
         //商品的全选和取消全选
         $(document).on('click', '.cart-select-all', function () {
             let $this = $(this);
@@ -88,7 +88,7 @@ let page = {
             }, function (errMsg) {
                 _this.showCartError();
             })
-        })
+        });
         //删除单个商品
         $(document).on('click', 'cart-delete', function () {
             if (window.confirm('确认要删除该商品嘛？')) {
@@ -125,8 +125,8 @@ let page = {
         })
     },
     loadCart: function () {
-        let _this = this;
-        //获取购物车列表
+        var _this = this;
+        // 获取购物车列表
         _cart.getCartList(function (res) {
             _this.renderCart(res);
         }, function (errMsg) {
@@ -136,12 +136,11 @@ let page = {
     //渲染购物车
     renderCart: function (data) {
         this.filter(data);
-        //缓存购物车信息
+        // 缓存购物车信息
         this.data.cartInfo = data;
-        //生成HTML
         let cartHtml = _mm.renderHtml(templateIndex, data);
-        $('page-wrap').html(cartHtml);
-        //通知导航的购物车更新数量
+        $('.page-wrap').html(cartHtml);
+        //通知导航购物车更新
         nav.loadCartCount();
     },
     //删除指定商品，支持批量，productId用逗号分割
@@ -156,6 +155,7 @@ let page = {
     //数据匹配
     filter: function (data) {
         data.notEmpty = !!data.cartProductVoList.length;
+
     },
     showCartError: function () {
         $('.page-wrap').html('<p class="err-tip">哪里不对了，刷新下试试吧。</p>')

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%= require('html-loader!./layout/head-common.html') %>
+    <title><%= htmlWebpackPlugin.options.title%> - Raymall</title>
+</head>
+<body>
+<%= require('html-loader!./layout/nav.html') %>
+<%= require('html-loader!./layout/header.html') %>
+<div class="crumb">
+    <div class="w">
+        <div class="crumb-con">
+            <a href="./index.html" class="link">HappyMall</a>
+            <span> ></span>
+            <span class="link-text"><%= htmlWebpackPlugin.options.title%></span>
+        </div>
+    </div>
+</div>
+<div class="page-wrap w">
+    <%= require('html-loader!./layout/nav-side.html') %>
+    <div class="content with-nav">
+        <div class="panel">
+            <div class="panel-title"><%= htmlWebpackPlugin.options.title%></div>
+            <div class="panel-body">
+                <div class="about-line">
+                    <span class="about-text enhance">这是一个学习用的商城项目，完整包含前后端的开发！！！</span>
+                </div>
+                <div class="about-line">
+                    <a href="https://github.com/weiqiujuan/HappyMmall.git" class="link" target="_blank">前端项目地址</a>
+                </div>
+                <div class="about-line">
+                    <a href="https://github.com/weiqiujuan/happyMall-admin.git" class="link" target="_blank">后端项目地址</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<%= require('html-loader!./layout/footer.html') %>
+</body>
+</html>

@@ -26,10 +26,14 @@ let Pagination = function () {
     })
 };
 //渲染分页组建
+//原型继承，如此定义的方法在以后的实现里均可继承这些方法
 Pagination.prototype.render = function (userOption) {
-    //合并选项
+    //合并选项,把后面的对象原型都赋予到第一个上面，会覆盖修改
+    //只会对第一层属性生效
+    //都覆盖在空对象上，就不会对原对象有影响了
     this.option = $.extend({}, this.defaultOption, userOption);
-    //判断容器是否为合法的jquery对象,instanceof是jquery中的一个对象
+    //判断容器是否为合法的jquery对象,
+    // instanceof是jquery中的一个对象，i的优先级大于instanceof
     if (!(this.option.container instanceof jQuery)) {
         return;
     }
@@ -46,7 +50,7 @@ Pagination.prototype.getPaginationHtml = function () {
         pageArray = [],
         start = option.pageNum - option.pageRange > 0
             ? option.pageNum - option.pageRange : 1,
-        end = option.pageNum + page.pageRange < option.pages
+        end = option.pageNum + option.pageRange < option.pages
             ? option.pageNum + option.pageRange : option.pages;
     //上一页按钮的数据
     pageArray.push({
