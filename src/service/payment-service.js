@@ -7,7 +7,6 @@ let _payment = {
             data: {
                 orderNo: orderNumber
             },
-            method: 'POST',
             success: resolve,
             error: reject
         });

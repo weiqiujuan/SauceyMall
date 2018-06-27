@@ -1,0 +1,5 @@
+<p class="payment-tips">訂單提交成功，請儘快支付！訂單號：{{orderNo}}</p>
+    <p class="payment-tips enhance">請使用支付寶掃描二維碼支付</p>
+    <p class="img-con">
+        <img src="{{qrUrl}}" alt="支付二維碼" class="qr-code"/>
+</p>

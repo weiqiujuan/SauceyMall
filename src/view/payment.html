@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%= require('html-loader!./layout/head-common.html')  %>
+    <%= require('html-loader!./layout/head-common.html') %>
     <title><%= htmlWebpackPlugin.options.title%> - happymmall电商平台</title>
 </head>
 <body>
-<%= require('html-loader!./layout/nav.html')  %>
-<%= require('html-loader!./layout/header.html')  %>
+<%= require('html-loader!./layout/nav.html') %>
+<%= require('html-loader!./layout/header.html') %>
 <div class="crumb">
     <div class="w">
         <div class="crumb-con">
@@ -15,6 +15,9 @@
         </div>
     </div>
 </div>
-<%= require('html-loader!./layout/footer.html')  %>
+<div class="page-wrap w">
+
+</div>
+<%= require('html-loader!./layout/footer.html') %>
 </body>
 </html>

@@ -34,7 +34,7 @@ let page = {
         let orderListHtml = '';
         let _this = this;
         let $listCon = $('.order-list-con');
-        $listCon.html('<div class="loading"></div>>')
+        $listCon.html('<div class="loading"></div>');
         _order.getOrderList(this.data.listParam, function (res) {
             orderListHtml = _mm.renderHtml(templateIndex, res);
             $listCon.html(orderListHtml);
