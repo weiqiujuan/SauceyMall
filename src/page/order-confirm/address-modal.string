@@ -12,12 +12,14 @@
         <div class="modal-body">
             <div class="form">
                 <div class="form-line">
-                    <label for="receiver-name" class="required">收件人姓名</label>
+                    <label for="receiver-name" class="label">
+                        <span class="required">*</span>收件人姓名：
+                    </label>
                     <input type="text" id="receiver-name" class="form-item" placeholder="请输入收件人姓名"
                            value="{{data.receiverName}}"/>
                 </div>
                 <div class="form-line">
-                    <label for="receiver-province" class="required">
+                    <label for="receiver-province" class="label">
                         <span class="required">*</span>
                         所在城市：
                     </label>
@@ -29,7 +31,7 @@
                     </select>
                 </div>
                 <div class="form-line">
-                    <label for="receiver-address" class="required">
+                    <label for="receiver-address" class="label">
                         <span class="required">*</span>
                         详细地址：
                     </label>
@@ -41,7 +43,7 @@
                         <span class="required">*</span>
                         收件人手机：
                     </label>
-                    <input type="number" class="form-item" id="receiver-phone" placeholder="请输入11位手机号"
+                    <input class="form-item" id="receiver-phone" placeholder="请输入11位手机号"
                            value="{{data.receiverPhone}}"/>
                 </div>
                 <div class="form-line">
@@ -51,7 +53,7 @@
                     <input class="form-item" id="receiver-zip" placeholder="如：100000" value="{{data.receiverZip}}"/>
                 </div>
                 <div class="form-line">
-                    <input type="hidden" class="receiver-id" value="{{data.id}}"/>
+                    <input type="hidden" id="receiver-id" value="{{data.id}}"/>
                     <a class="btn address-btn">保存收获地址</a>
                 </div>
             </div>

@@ -23,7 +23,6 @@ let page = {
     },
     bindEvent: function () {
         let _this = this;
-
         //添加地址选中事件
         $(document).on('click', '.address-item', function () {
             $(this).addClass("active")
@@ -80,13 +79,13 @@ let page = {
         $(document).on('click', '.address-delete', function (e) {
             e.stopPropagation();
             let id = $(this).parents('.address-item').data('id');
-            window.confirm('确认删除改地址吗？', function () {
+            if (window.confirm('确认删除改地址吗？')) {
                 _address.deleteAddress(id, function (res) {
                     _this.loadAddressList();
                 }, function (errMsg) {
                     _mm.errorTips(errMsg)
                 })
-            })
+            }
         })
     },
     loadAddressList: function () {
@@ -101,7 +100,17 @@ let page = {
 
         })
     },
+    //加载商品列表
+    loadProductList: function () {
+        let _this = this;
+        _order.getProductList(function (res) {
+            let productListHtml = _mm.renderHtml(templateProduct, res);
+            $('.product-con').html(productListHtml);
+        }, function (errMsg) {
+            $('.product-con').html('<p class="err-tip">地址加载失败，请刷新后重试</p>');
 
+        })
+    },
     filterAddress: function (data) {
         if (this.data.selectedAddressId) {
             let selectedAddressIdFlag = false;
@@ -115,22 +124,8 @@ let page = {
                 this.data.selectedAddressId = null;
             }
         }
-    },
-    //加载商品列表
-    loadProductList: function () {
-        let _this = this;
-        _order.getProductList(function (res) {
-            let productListHtml = _mm.renderHtml(templateProduct, res);
-            $('.product-con').html(productListHtml);
-
-        }, function (errMsg) {
-            $('.product-con').html('<p class="err-tip">地址加载失败，请刷新后重试</p>');
-
-        })
-    },
-
+    }
 };
 $(function () {
     page.init();
 });
-

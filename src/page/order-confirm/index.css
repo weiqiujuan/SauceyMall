@@ -2,9 +2,9 @@
 .address-item,
 .address-add{
     width: 200px;
-    float: left;
+    padding: 10px;
     border: 3px dashed #cccccc;
-    padding: 5px 8px;
+    float: left;
     margin: 20px 20px 0 0;
     cursor: pointer;
 }
@@ -14,7 +14,7 @@
 }
 
 .address-item:hover,
-.address-add{
+.address-add:hover{
     background: #fafafa;
 }
 
@@ -26,7 +26,13 @@
     line-height: 20px;
 }
 
+.address-item.active .address-title {
+    color: #c60023;
+    font-weight: bold;
+    border-bottom: 1px solid #c60023;
+}
 .address-item .address-detail {
+    font-size: 12px;
     height: 40px;
     line-height: 20px;
     overflow: hidden;
@@ -72,7 +78,7 @@
 
 .product-table th,
 .product-table td {
-    border-bottom: 1px dotted #dddddd;
+    border-bottom: 1px solid #dddddd;
 }
 
 .product-table .cell-img {
@@ -103,7 +109,7 @@
 }
 
 .product-table .cell-total {
-    width: 200%;
+    width: 20%;
     text-align: center;
 }
 
@@ -122,9 +128,99 @@
 }
 
 .submit-con .order-submit {
-    height: 50px;
-    line-height: 50px;
+    height: 60px;
+    line-height: 60px;
     width: 100px;
     text-align: center;
 }
 /**/
+/*modal 编辑弹窗*/
+.modal {
+    /*这样就可以实现全屏覆盖*/
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #eee;
+    background: rgba(0, 0, 0, .4);
+    /*防止有层级过高的挡住dialog*/
+    z-index: 1000;
+    /*让dialog不能左右滚动*/
+    overflow-x: hidden;
+    /*防止内容过长超出可视区范围*/
+    overflow-y: auto;
+}
+
+.modal .modal-container {
+    width: 600px;
+    background: #fff;
+    margin: 100px auto;
+    border-radius: 5px;
+    /*text-align: center;*/
+    padding: 5px;
+}
+
+.modal .modal-container .modal-header {
+    position: relative;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.modal .modal-container .modal-header .modal-title {
+    font-size: 14px;
+}
+
+.modal .modal-container .modal-header .close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.modal .modal-container .modal-body {
+    padding: 15px;
+}
+
+/*form部分*/
+.form .form-line {
+    margin: 5px 0;
+    overflow: hidden;
+}
+
+.form .form-line .label {
+    display: block;
+    float: left;
+    width: 100px;
+    text-align: right;
+    font-size: 13px;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 5px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.form .form-line .label .required {
+    color: #c60023;
+}
+
+.form .form-line .form-item {
+    padding: 0 5px;
+    height: 30px;
+    line-height: 30px;
+    outline: none;
+    margin-right: 10px;
+}
+
+.form .form-line .btn {
+    margin-left: 105px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+
+

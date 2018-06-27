@@ -112,7 +112,8 @@ let page = {
         if (!_mm.validate(formData.email, 'email')) {
             result.msg = '邮箱格式不正确';
             return result;
-        }  // 验证密码提示问题是否为空
+        }
+        // 验证密码提示问题是否为空
         if (!_mm.validate(formData.question, 'require')) {
             result.msg = '密码提示问题不能为空';
             return result;

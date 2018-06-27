@@ -68,8 +68,9 @@ let _mm = {
         else if ("phone" === type) {
             return /^1\d{10}$/.test(val);
         }
+        //邮箱验证
         else if ("email" === type) {
-            return /^(\w)+(\. \w)*@(\w)+((\. \w{2,3}){1,3})$/.test(val);
+            return /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/.test(val);
         }
     },
     //统一登录处理

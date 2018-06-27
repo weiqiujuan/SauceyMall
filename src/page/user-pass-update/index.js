@@ -25,7 +25,7 @@ let page = {
     bindEvent: function () {
         let _this = this;
         //点击提交后按钮的动作
-        $(document).on('click', 'btn-submit', function () {
+        $(document).on('click', '.btn-submit', function () {
             let userInfo = {
                     password: $.trim($('#password').val()),
                     passwordNew: $.trim($('#password-new').val()),
@@ -39,6 +39,8 @@ let page = {
                     passwordNew: userInfo.passwordNew
                 }, function (res, msg) {
                     _mm.successTips(msg);
+                    window.location.href = './user-center.html';
+
                 }, function (errMsg) {
                     _mm.errorTips(errMsg)
                 });

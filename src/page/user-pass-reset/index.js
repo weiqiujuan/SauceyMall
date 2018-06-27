@@ -34,76 +34,51 @@ let page = {
     },
     bindEvent: function () {
         let _this = this;
-        //用户名后的下一步
-        $("#submit-username").click(function () {
+        $('#submit-username').click(function () {
             let username = $.trim($('#username').val());
-
-            //用户名存在
-            if (username) {
-                _user.getQuestion(username, function (res) {
-                    _this.data.username = username;
-                    _this.data.question = res;
-                    _this.loadStepQuestion();
-                }, function (errMsg) {
-                    formError.show(errMsg);
-                });
-            }
-            //用户名不存在
-            else {
-                formError.show('请输入用户名');
+            _this.submitUsername(username, _this);
+        });
+        $('#username').keyup(function (e) {
+            //回车键监听
+            if (e.keyCode === 13) {
+                let username = $.trim($('#username').val());
+                _this.submitUsername(username, _this);
             }
         });
         //输入密码提示问题答案中的下一步
-        $('#submit-question').click(function () {
-            let answer=$.trim($("#answer").val());
-            //密码提示问题答案存在
-            if(answer){
-                //检查密码提示问题答案
-                _user.checkAnswer({
-                    username:_this.data.username,
-                    question:_this.data.question,
-                    answer:answer
-                },function (res) {
-                    _this.data.answer=answer;
-                    _this.data.token=res;
-                    _this.loadStepPassword();
-                },function (errMsg) {
-                    formError.show(errMsg)
-                });
-            }
-            else{
-                formError.show('请输入密码提示问题答案')
+        $("#submit-question").click(function () {
+            let answer = $.trim($('#answer').val());
+            _this.submitAnswer(answer, _this);
+        });
+        $('#answer').keyup(function (e) {
+            //回车键监听
+            if (e.keyCode === 13) {
+                let answer = $.trim($('#answer').val());
+                _this.submitAnswer(answer, _this);
             }
         });
-        //输入新密码后的按钮
         $('#submit-password').click(function () {
             let password = $.trim($('#password').val());
-            //密码不为空
-            if (password && password.length >= 6) {
-                //检查密码提示问题答案
-                _user.resetPassword({
-                    username: _this.data.username,
-                    passwordNew: password,
-                    forgetToken: _this.data.token
-                }, function (res) {
-                    window.location.href = './result.html?type=pass-reset';
-                }, function (errMsg) {
-                    formError.show(errMsg);
-                });
-            }
-            else {
-                formError.show("请输入不少于６位的新密码");
+            _this.submitPassword(password, _this);
+        });
+        $('#password').keyup(function (e) {
+            //回车键监听
+            if (e.keyCode === 13) {
+                let password = $.trim($('#password').val());
+                _this.submitPassword(password, _this);
             }
         });
     },
-
+    // 加载输入用户名的一步
     loadStepUsername: function () {
         $(".step-username").show();
     },
+    //加载输入密码提示问题答案的一步
     loadStepQuestion: function () {
+        //清楚错误
         formError.hide();
         // 做容器的切换
-        $(".hide-username").hide()
+        $(".step-username").hide()
             .siblings('.step-question').show()
             .find('.question').text(this.data.question);
     },
@@ -113,6 +88,56 @@ let page = {
         //容器的切换
         $(".step-question").hide()
             .siblings('.step-password').show();
+    },
+    //提交用户名获取问题
+    submitUsername: function (username, _page) {
+        if (username) {
+            _user.getQuestion(username, function (res) {
+                _page.data.username = username;
+                _page.data.question = res;
+                _page.loadStepQuestion();
+            }, function (errMsg) {
+                formError.show(errMsg);
+            });
+        } else {
+            formError.show('请输入用户名');
+        }
+    },
+    //提交问题答案获取token
+    submitAnswer: function (answer, _page) {
+        if (answer) {
+            _user.checkAnswer({
+                username: _page.data.username,
+                question: _page.data.question,
+                answer: answer
+            }, function (res) {
+                _page.data.answer = answer;
+                _page.data.token = res;
+                _page.loadStepPassword();
+            }, function (errMsg) {
+                formError.show(errMsg);
+            });
+        } else {
+            formError.show('请输入答案');
+        }
+    },
+    //输入新密码后的按钮
+    submitPassword: function (password, _page) {
+        if (password && password.length >= 6) {
+            //检查密码提示问题答案
+            _user.resetPassword({
+                username: _page.data.username,
+                passwordNew: password,
+                forgetToken: _page.data.token
+            }, function (res) {
+                window.location.href = './result.html?type=pass-reset';
+            }, function (errMsg) {
+                formError.show(errMsg);
+            });
+        }
+        else {
+            formError.show("请输入不少于６位的新密码");
+        }
     }
 };
 $(function () {

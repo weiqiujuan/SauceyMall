@@ -1,7 +1,6 @@
 require('./index.css');
 require('page/common/nav/index.js');
 require('page/common/header/index.js');
-require('page/common/nav-side/index.js');
 
 let navSide = require('page/common/nav-side/index.js');
 let _mm = require('util/mall.js');
@@ -25,7 +24,7 @@ let page = {
     bindEvent: function () {
         let _this = this;
         //点击提交后按钮的动作
-        $(document).on('click', 'btn-submit', function () {
+        $(document).on('click', '.btn-submit', function () {
             let userInfo = {
                     phone: $.trim($('#phone').val()),
                     email: $.trim($('#email').val()),
@@ -40,8 +39,7 @@ let page = {
                 }, function (errMsg) {
                     _mm.errorTips(errMsg);
                 });
-            }
-            else {
+            } else {
                 _mm.errorTips(validateResult.msg);
 
             }
@@ -87,7 +85,6 @@ let page = {
         return result;
     }
 };
-
 
 $(function () {
     page.init();

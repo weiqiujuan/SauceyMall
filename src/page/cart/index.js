@@ -90,7 +90,7 @@ let page = {
             })
         });
         //删除单个商品
-        $(document).on('click', 'cart-delete', function () {
+        $(document).on('click', '.cart-delete', function () {
             if (window.confirm('确认要删除该商品嘛？')) {
                 let productId = $(this).parents('.cart-table').data('product-id');
                 _this.deleteCartProduct(productId);
@@ -101,10 +101,12 @@ let page = {
         $(document).on('click', '.delete-selected', function () {
             if (window.confirm('确认要删除选中的商品')) {
                 let arrProductIds = [],
-                    $selectedItem = ('.cart-select:checked');
+                    //:checked 表示取出所有属性为checked 的节点 ，返回一个节点数组
+                    $selectedItem = $('.cart-select:checked');
                 //循环查找选中的productIds
                 for (let i = 0, iLength = $selectedItem.length; i < iLength; i++) {
-                    arrProductIds.push($($selectedItem[i]).parents('.cart-table').data('product-id'))
+                    arrProductIds.push($($selectedItem[i])
+                        .parents('.cart-table').data('product-id'))
                 }
                 if (arrProductIds.length) {
                     _this.deleteCartProduct(arrProductIds.join(','));
@@ -118,7 +120,7 @@ let page = {
         $(document).on('click', '.btn-submit', function () {
             //总价大于0,进行提交
             if (_this.data.cartInfo && _this.data.cartInfo.cartTotalPrice > 0) {
-                window.location.href = './confirm.html';
+                window.location.href = './order-confirm.html';
             } else {
                 _mm.errorTips('请选择商品后再提交');
             }

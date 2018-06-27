@@ -17,7 +17,6 @@
     </div>
 </div>
 {{/list}}
-
 <div class="address-add">
     <div class="address-new">
         <i class="fa fa-plus"></i>
