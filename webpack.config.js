@@ -26,7 +26,6 @@ var config = {
     /*
         mode: 'dev' === WEBPACK_ENV ? 'development' : 'production',
     */
-
     //【改动】：删除了入口文件的中括号，可选的改动，没什么影响
     entry: {
         'common': './src/page/common/index.js',
@@ -50,7 +49,8 @@ var config = {
     output: {
         //  【改动】：删除path的配置，在webpack4中文件默认生成的位置就是/dist,
         // 而publicPath和filename特性的设置要保留
-        //path:__dirname+'/dist/',
+        //path:__dirname+'/dist/'
+
         publicPath: '/dist',
         filename: 'js/[name].js'
     },
@@ -113,6 +113,7 @@ var config = {
             }
         ]
     },
+
     resolve: {
         alias: {
             node_modules: __dirname + '/node_modules',
