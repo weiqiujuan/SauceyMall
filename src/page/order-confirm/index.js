@@ -93,7 +93,7 @@ let page = {
         //加载地址列表
         _address.getAddressList(function (res) {
             _this.filterAddress(res);
-            let addressListHtml = _mm.renderHtml(templateAddress, res.data);
+            let addressListHtml = _mm.renderHtml(templateAddress, res);
             $('.address-con').html(addressListHtml);
         }, function (errMsg) {
             $('.address-con').html('<p class="err-tip">地址加载失败，请刷新后重试</p>>');
