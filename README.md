@@ -1,10 +1,12 @@
 
-# Sauceyall
+# SauceyMall
 
 ## 项目简介：
-### 前后端完全分离，模块化开发的前端电商项目
+
+#### 前后端完全分离，模块化开发的前端电商项目
 
 ## 项目搭建和开发环境
+
 > 开发环境：nodejs,npm,git,webstorm,chrome 
 
 > 项目搭建：git,webpack,webpack-dev-server
@@ -14,7 +16,7 @@
 
 ### 项目通用功能：
 
-#####1.  通用js工具
+##### 1.  通用js工具
 
 * 网络数据请求功能
 
@@ -87,13 +89,13 @@
 
 >npm run dist_win(windows)  
 
-##项目所用资料
+## 项目所用资料
 
  [接口文档地址](https://gitee.com/imooccode/happymmallwiki/wikis/Home)
  
  [遇到一些问题的解决地址](https://www.imooc.com/article/26428)
  
-##声明一下
+## 声明一下
 
 > 此次发布的项目是经过更新的，webpack从1.x.x升级到了4.x.x，对node,npm版本要求也很高，不需要用Charles代理软件，直接将跨域问题放到webpack中解决。
  
