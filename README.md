@@ -78,16 +78,16 @@
 > 可用换源的方式加快依赖的安装
 
 #### 启动文件
-> npm run dev(lnux)  
+> npm run dev_linux(lnux)  
 
-> npm run dev_win(windows)  
+> npm run dev(windows)  
 
 > http://localhost:8088/dist/view/index.html
 
 #### 打包文件
->npm run dist(linux)  
+>npm run dist_linux(linux)  
 
->npm run dist_win(windows)  
+>npm run dist(windows)  
 
 ## 项目所用资料
 

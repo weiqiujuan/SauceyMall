@@ -3,15 +3,18 @@
   "version": "1.0.0",
   "description": "前端代码",
   "main": "index.js",
+  "homepage": "https://weiqiujuan.github.io/SauceyMall",
   "scripts": {
+    "dev_linux": "./node_modules/.bin/webpack-dev-server",
     "dev": "./node_modules/.bin/webpack-dev-server",
-    "dev_win": "./node_modules/.bin/webpack-dev-server",
-    "dist": "WEBPACK_ENV=online ./node_modules/.bin/webpack -p",
-    "dist_win": "set WEBPACK_ENV=online&& webpack -p"
+    "dist_linux": "WEBPACK_ENV=online ./node_modules/.bin/webpack -p",
+    "dist": "set WEBPACK_ENV=online&& webpack -p",
+    "predeploy": "npm run dist",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/weiqiujuan/HappyMmall.git"
+    "url": "https://github.com/weiqiujuan/SauceyMall.git"
   },
   "keywords": [
     "weiqiujuan"
@@ -22,6 +25,7 @@
     "css-loader": "^0.28.11",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
+    "gh-pages": "^3.1.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.1.0",
     "style-loader": "^0.20.3",
